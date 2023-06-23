@@ -5,7 +5,7 @@ function Header() {
       <div className="header-logo">Logo</div>
       <nav className="header-nav">
         <ul>
-          <li><a href="/Account">My account</a></li>
+          <li><a href="/seg3525-projet2/Account">My account</a></li>
           {/* Add more menu items as needed */}
         </ul>
       </nav>

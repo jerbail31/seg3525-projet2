@@ -3,9 +3,9 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-title">Chase's Grass Cutting Service</div>
       <ul className="navbar-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/Services">Services</a></li>
-        <li><a href="/Booking">Book a Service</a></li>
+        <li><a href="/seg3525-projet2">Home</a></li>
+        <li><a href="/seg3525-projet2/Services">Services</a></li>
+        <li><a href="/seg3525-projet2/Booking">Book a Service</a></li>
       </ul>
     </nav>
   );

@@ -18,10 +18,10 @@ function App() {
       <Navbar />
       <br/>
       <Routes>
-        <Route exact path="/" exact element={<Home />}/>
-        <Route path="/Services" element={<Services />}/>
-        <Route path="/Booking" element={<Booking />}/> 
-        <Route path="/Account" element={<Account />}/>
+        <Route exact path="/seg3525-projet2" element={<Home />}/>
+        <Route path="/seg3525-projet2/Services" element={<Services />}/>
+        <Route path="/seg3525-projet2/Booking" element={<Booking />}/> 
+        <Route path="/seg3525-projet2/Account" element={<Account />}/>
       </Routes>
       <Footer />
     </div>
