@@ -1,23 +1,34 @@
+import { Container, Row, Col } from 'react-bootstrap';
+import icon from "./icon.png"
+import { FaEnvelope, FaPhone, FaFacebook } from 'react-icons/fa';
 
 function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-item">
-        <i className="fas fa-home"></i>
-        <span>Home</span>
-      </div>
-      <div className="footer-item">
-        <i className="fas fa-envelope"></i>
-        <span>Contact</span>
-      </div>
-      <div className="footer-item">
-        <i className="fas fa-info-circle"></i>
-        <span>About</span>
-      </div>
-      <div className="footer-item">
-        <i className="fas fa-user"></i>
-        <span>Profile</span>
-      </div>
+      <Container>
+        <Row>
+          <Col className='footer-left'>
+            {/* Left-aligned text */}
+            <img src={icon} alt="Logo" className="footer-icon"></img>
+            <span>© 2023 Chase's Grass Cutting Service</span>
+          </Col>
+          <Col className="d-flex justify-content-end">
+            {/* Right-aligned spans */}
+            <div className="footer-item">
+              <FaEnvelope />
+              <span>chase@chasesgrass.com</span>
+            </div>
+            <div className="footer-item">
+              <FaPhone />
+              <span>613-413-9808</span>
+            </div>
+            <div className="footer-item">
+              <FaFacebook />
+              <span>Facebook</span>
+            </div>
+          </Col>
+        </Row>
+      </Container>
     </footer>
   );
 }
