@@ -159,7 +159,7 @@
 /*ServiceCard*/
 .serviceCard-main{
   width:50% !important;
-  padding:10px 10px;
+  padding:0px 10px 20px 10px;
 }
 .serviceCard-button{
   float:right;
