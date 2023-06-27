@@ -17,7 +17,7 @@ const CustomButton = ({ id, title, onClick, includes, price }) => {
   }
 
 
-  price = 'Price: ' + price;
+  price = 'Median Price: ' + price;
   return (
     <div id={id} className="serviceCard-main">
       <Card className='serviceCard-card'>

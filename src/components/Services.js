@@ -176,7 +176,7 @@ function Services() {
                   </div>
 
                   <Card.Text className='services-filterText'>
-                    Prices vary according to yard size. An estimate will be determined during the booking phase.
+                    *Prices vary according to yard size. An estimate will be determined during the booking phase.
                   </Card.Text>
                 </Form>
               </Card.Body>
