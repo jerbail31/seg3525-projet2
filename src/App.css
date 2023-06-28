@@ -141,6 +141,7 @@
 /*Services*/
 .services-filter{
   border: 1px solid black;
+  margin-bottom: 15px;
 }
 .services-filterItems{
   margin-left:15px;
@@ -156,10 +157,17 @@
   display: inline-flex;
   flex-wrap: wrap;
 }
+.services-msgCompare{
+  font-size: small;
+  display:none;
+}
 /*ServiceCard*/
 .serviceCard-main{
   width:50% !important;
   padding:0px 10px 20px 10px;
+}
+.serviceCard-card{
+  cursor:cell;
 }
 .serviceCard-button{
   float:right;

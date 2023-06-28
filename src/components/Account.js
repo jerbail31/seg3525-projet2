@@ -1,4 +1,4 @@
-import { Container, Row, Col, Button, Table } from 'react-bootstrap';
+import { Container, Table } from 'react-bootstrap';
 
 function Account() {
   return (

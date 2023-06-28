@@ -46,6 +46,9 @@ function Services() {
 
   const serviceList = [yearGrass, yearTrim, yearFull];
   useEffect(() => {
+    if (selectedOccurence === '') {
+      return;
+    }
     filterCards();
   });
 
@@ -72,26 +75,56 @@ function Services() {
     else if (isCheckedGrass || isCheckedTrim || IsCheckedAeration || IsCheckedLeaf) {
       if (isCheckedGrass) {
         if (service[2][0] === false) {
-          return false
+          return false;
         }
       }
       if (isCheckedTrim) {
         if (service[2][1] === false) {
-          return false
+          return false;
         }
       }
       if (IsCheckedAeration) {
         if (service[2][2] === false) {
-          return false
+          return false;
         }
       }
       if (IsCheckedLeaf) {
         if (service[2][3] === false) {
-          return false
+          return false;
         }
       }
     }
     return true;
+  }
+
+  const compareClick = () => {
+    var noneSelected = true;
+    for (var i = 0; i < serviceList.length; i++) {
+      var parent = document.getElementById(serviceList[i][0]);
+      var card = parent.firstChild;
+      if (card.style.borderColor === 'rgb(59, 180, 75)') {
+        parent.style.display = 'block';
+        noneSelected = false;
+      }
+      else {
+        parent.style.display = 'none';
+      }
+    }
+    if (noneSelected) {
+      for (i = 0; i < serviceList.length; i++) {
+        parent = document.getElementById(serviceList[i][0]);
+        parent.style.display = 'block';
+      }
+      document.getElementById('msgComapre').style.display = 'block';
+    }
+    else{
+      document.getElementById('msgComapre').style.display = 'none';
+    }
+    setselectedOccurence('');
+    setIsCheckedGrass(false);
+    setisCheckedTrim(false);
+    setIsCheckedLeaf(false);
+    setIsCheckedAeration(false);
   }
 
   return (
@@ -176,7 +209,8 @@ function Services() {
                 </Form>
               </Card.Body>
             </Card>
-            <Button variant='success'>Compare selected services</Button>
+            <Button variant='success' onClick={compareClick} style={{ width: '100%' }}>Compare selected services</Button>
+            <label id='msgComapre' className='services-msgCompare'>Click on service cards to select services</label>
           </Col>
           <Col md={9}>
             <Container id='cardContainer' className='services-cardContainer'>

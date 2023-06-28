@@ -16,11 +16,22 @@ const CustomButton = ({ id, title, onClick, includes, price }) => {
     includeObject.push('Aeration');
   }
 
+  const cardClick = () => {
+    var card = document.getElementById(id).firstChild;
+    if(card.style.borderColor === 'rgb(59, 180, 75)'){
+      card.style.borderColor = 'rgba(0, 0, 0, 0.175)';
+      card.style.borderWidth = '1px';
+    }
+    else{
+      card.style.borderColor = '#3BB44B';
+      card.style.borderWidth = '2px';
+    }
+  }
 
   price = 'Median Price: ' + price;
   return (
     <div id={id} className="serviceCard-main">
-      <Card className='serviceCard-card'>
+      <Card className='serviceCard-card' onClick={cardClick}>
         <Card.Body>
           <Card.Title>{title}</Card.Title>
           <div className='serviceCard-includes'>
