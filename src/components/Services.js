@@ -1,4 +1,4 @@
-import { Container, Row, Col, Form, Card } from 'react-bootstrap';
+import { Container, Row, Col, Form, Card, Button } from 'react-bootstrap';
 import React, { useState, useEffect } from 'react';
 import ServiceCard from './ServiceCard.js';
 import { useNavigate } from 'react-router-dom';
@@ -11,7 +11,6 @@ function Services() {
 
   const handleRadioChange = (event) => {
     setselectedOccurence(event.target.value);
-    //filterCards();
   };
 
   //ckb
@@ -22,21 +21,17 @@ function Services() {
 
   const handleCheckboxChangeGrass = () => {
     setIsCheckedGrass(!isCheckedGrass);
-    //filterCards();
   };
 
   const handleCheckboxChangeTrim = () => {
     setisCheckedTrim(!isCheckedTrim);
-    //filterCards();
   };
 
   const handleCheckboxChangeAeration = () => {
     setIsCheckedAeration(!IsCheckedAeration);
-    //filterCards();
   };
   const handleCheckboxChangeLeaf = () => {
     setIsCheckedLeaf(!IsCheckedLeaf);
-    //filterCards();
   };
 
   const navigate = useNavigate();
@@ -181,6 +176,7 @@ function Services() {
                 </Form>
               </Card.Body>
             </Card>
+            <Button variant='success'>Compare selected services</Button>
           </Col>
           <Col md={9}>
             <Container id='cardContainer' className='services-cardContainer'>

@@ -179,6 +179,51 @@
   width:80%;
   height:48px;
 }
+/*Booking*/
+.booking-container{
+  background-color: #EEEEEE;
+  padding:25px 40px !important;
+}
+.booking-personalInfo{
+  padding: 5px 0px 0px 15px;
+  margin-bottom:45px
+}
+.booking-serviceInfo{
+  padding: 20px 0px 0px 15px;
+  margin-bottom: 45px;
+}
+.booking-lbl{
+  margin-right:10px;
+  font-weight:bold;
+}
+.booking-serviceHead{
+  display: flex;
+  align-items: center;
+}
+.booking-serviceHead h5{
+  margin-right: 20px;
+  margin-bottom:0px;
+}
+.booking-btnbook{
+  float:right;
+  padding:10px 100px!important;
+}
+/*Account*/
+.account-service{
+  margin-top:30px;
+}
+.account-serviceTable{
+  margin-left: 10px;
+}
+.account-chat{
+  margin-top:40px;
+}
+.account-chatbox{
+  margin-left:10px;
+  margin-top:10px;
+  background-color: #EEEEEE;
+  height:300px;
+}
 /*Footer*/
 .footer {
   margin-top:25px;
