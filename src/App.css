@@ -28,10 +28,12 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+
 /*Header*/
 .header {
   background-color: #3BB44B;
@@ -41,19 +43,24 @@
   padding: 5px 30px;
 
 }
+
 .header-left {
   font-size: 15px;
 }
-.header-item{
-  margin-right:25px;
-  display:inline
+
+.header-item {
+  margin-right: 25px;
+  display: inline
 }
-.header-item :hover{
+
+.header-item :hover {
   cursor: pointer;
 }
-.header-item span{
+
+.header-item span {
   padding-left: 5px;
 }
+
 .header-nav ul {
   list-style-type: none;
   margin: 0;
@@ -73,13 +80,14 @@
 .header-nav ul li a:hover {
   text-decoration: underline;
 }
+
 /*Navbar*/
 .navbar {
   background-color: #016E37;
   color: white;
   display: flex;
   position: sticky !important;
-  top:0;
+  top: 0;
   justify-content: space-between;
   align-items: center;
   padding: 20px 30px !important;
@@ -109,163 +117,228 @@
 }
 
 .navbar-links li label:hover {
-  cursor:pointer;
+  cursor: pointer;
   text-decoration: underline;
 }
 
 /*Home*/
-.home-description{
-  padding:10px;
-  background-color : #EEEEEE;
-}
-.home-thirdbox{
-  padding:50px 35px !important;
-  text-align: center;
-}
-.home-side{
-  background-color: #016E37;
-}
-.home-middle{
-  background-color: #3BB44B;
-}
-.home-thirdbox div h4{
-  color:#EEEEEE;
-}
-.home-thirdbox div Button{
-  width: 80%;
-  margin-top:25px;
-  font-size:18px;
-}
-.home-text{
-  padding-top:25px;
+.home-description {
+  padding: 10px;
+  background-color: #EEEEEE;
 }
 
+.home-thirdbox {
+  padding: 50px 35px !important;
+  text-align: center;
+}
+
+.home-side {
+  background-color: #016E37;
+}
+
+.home-middle {
+  background-color: #3BB44B;
+}
+
+.home-thirdbox div h4 {
+  color: #EEEEEE;
+}
+
+.home-thirdbox div Button {
+  width: 80%;
+  margin-top: 25px;
+  font-size: 18px;
+}
+
+.home-text {
+  padding-top: 25px;
+}
+
+/*Reviews*/
+.reviews-button {
+  width: 80%;
+  margin-top: 25px;
+  font-size: 18px;
+}
+
+.Reviews {
+  text-align: center;
+}
+.reviews-main {
+  display: flex;
+  align-items: center;
+}
+.reviews-arrowLeft{
+  margin-left: -50px;
+}
+.reviews-arrowRight{
+  margin-left: 26px;
+}
+.reviews-arrow:hover{
+  cursor: pointer;
+}
+.reviews-reviewer{
+  color:white;
+  float:right;
+  margin-right: 10px;
+}
 /*Services*/
-.services-filter{
+.services-filter {
   border: 1px solid black;
   margin-bottom: 15px;
 }
-.services-filterItems{
-  margin-left:15px;
+
+.services-filterItems {
+  margin-left: 15px;
 }
-.services-filterGroup{
-  margin-top:20px;
+
+.services-filterGroup {
+  margin-top: 20px;
 }
-.services-filterText{
-  margin-top:20px;
+
+.services-filterText {
+  margin-top: 20px;
   font-size: small;
 }
-.services-cardContainer{
+
+.services-cardContainer {
   display: inline-flex;
   flex-wrap: wrap;
 }
-.services-msgCompare{
+
+.services-msgCompare {
   font-size: small;
-  display:none;
+  display: none;
 }
-.services-filterTitle div{
-  margin-bottom:0px;
-  margin-right:20px;
+
+.services-filterTitle div {
+  margin-bottom: 0px;
+  margin-right: 20px;
 }
-.services-filterTitle{
+
+.services-filterTitle {
   display: flex;
   align-items: center;
 }
-.services-clearFilters button{
+
+.services-clearFilters button {
   font-size: 12px;
   padding: 4px 8px;
-  float:right;
+  float: right;
 }
+
 /*ServiceCard*/
-.serviceCard-main{
-  width:50% !important;
-  padding:0px 10px 20px 10px;
+.serviceCard-main {
+  width: 50% !important;
+  padding: 0px 10px 20px 10px;
 }
-.serviceCard-card{
-  cursor:cell;
+
+.serviceCard-card {
+  cursor: cell;
 }
-.serviceCard-button{
-  float:right;
+
+.serviceCard-button {
+  float: right;
 }
-.serviceCard-price{
+
+.serviceCard-price {
   display: inline;
-  flex:1;
+  flex: 1;
   margin-left: 10px;
   padding-top: 50px;
 }
-.serviceCard-includes{
+
+.serviceCard-includes {
   margin-top: 20px;
-  margin-left:10px;
+  margin-left: 10px;
 }
-.serviceCard-includes ul{
-  width:80%;
-  height:85px;
+
+.serviceCard-includes ul {
+  width: 80%;
+  height: 85px;
 }
+
 /*Booking*/
-.booking-container{
+.booking-container {
   background-color: #EEEEEE;
-  padding:25px 40px !important;
+  padding: 25px 40px !important;
 }
-.booking-personalInfo{
+
+.booking-personalInfo {
   padding: 5px 0px 0px 15px;
-  margin-bottom:45px
+  margin-bottom: 45px
 }
-.booking-serviceInfo{
+
+.booking-serviceInfo {
   padding: 20px 0px 0px 15px;
   margin-bottom: 45px;
 }
-.booking-lbl{
-  margin-right:10px;
-  font-weight:bold;
+
+.booking-lbl {
+  margin-right: 10px;
+  font-weight: bold;
 }
-.booking-serviceHead{
+
+.booking-serviceHead {
   display: flex;
   align-items: center;
 }
-.booking-serviceHead h5{
+
+.booking-serviceHead h5 {
   margin-right: 20px;
-  margin-bottom:0px;
+  margin-bottom: 0px;
 }
-.booking-btnbook{
-  float:right;
-  padding:10px 100px!important;
+
+.booking-btnbook {
+  float: right;
+  padding: 10px 100px !important;
 }
-.booking-yardRow{
-  margin-top:20px !important;
+
+.booking-yardRow {
+  margin-top: 20px !important;
 }
+
 /*Account*/
-.account-service{
-  margin-top:30px;
+.account-service {
+  margin-top: 30px;
 }
-.account-serviceTable{
+
+.account-serviceTable {
   margin-left: 10px;
 }
-.account-chat{
-  margin-top:40px;
+
+.account-chat {
+  margin-top: 40px;
 }
-.account-chatbox{
-  margin-left:10px;
-  margin-top:10px;
+
+.account-chatbox {
+  margin-left: 10px;
+  margin-top: 10px;
   background-color: #EEEEEE;
-  height:300px;
+  height: 300px;
 }
+
 /*Footer*/
 .footer {
-  margin-top:25px;
+  margin-top: 25px;
   border-top: 1px solid #6c757d;
   padding: 15px;
   display: flex;
 }
-.footer-icon{
-  width:35px;
-  margin-right:5px;
+
+.footer-icon {
+  width: 35px;
+  margin-right: 5px;
 }
-.footer-item{
-  margin-left:25px;
+
+.footer-item {
+  margin-left: 25px;
 }
-.footer-item :hover{
+
+.footer-item :hover {
   cursor: pointer;
 }
-.footer-item span{
+
+.footer-item span {
   padding-left: 5px;
 }

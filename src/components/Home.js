@@ -1,20 +1,20 @@
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import cart from "./cart.png";
 import { useNavigate } from 'react-router-dom';
-
+import Reviews from './Reviews.js';
 
 function Home() {
-  
+
   const navigate = useNavigate();
   const navigateToAccount = () => {
     navigate('/seg3525-projet2/Account');
   };
-  
+
   const navigateToServices = () => {
     navigate('/seg3525-projet2/Services');
   };
 
-  
+
   return (
     <div className="home">
       <Container className="home-description">
@@ -29,7 +29,7 @@ function Home() {
               <h4>
                 Hi I'm Chase!
               </h4>
-              <br/>
+              <br />
               <h4>
                 I'm a local student with a summer grass cutting service.
                 I have four years of lawn mowing experience around the community.
@@ -51,19 +51,14 @@ function Home() {
             </div>
           </Col>
           <Col className="home-middle home-thirdbox">
+            <Reviews></Reviews>
+          </Col>
+          <Col className="home-side home-thirdbox">
             <div>
               <h4>
                 I offer one-time and seasonal services
               </h4>
               <Button variant='warning' onClick={navigateToServices}>View services</Button>
-            </div>
-          </Col>
-          <Col className="home-side home-thirdbox">
-            <div>
-              <h4>
-                Servicing Blackburn Hamlet and Chapel Hill
-              </h4>
-              <Button variant='warning'>Verify Address</Button>
             </div>
           </Col>
         </Row>
