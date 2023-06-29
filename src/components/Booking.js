@@ -90,7 +90,7 @@ function Booking() {
               </Form.Group>
             </Col>
             <Col md={9}>
-              <Form.Group controlId="address">
+              <Form.Group>
                 <Form.Label>Address:</Form.Label>
                 <Form.Control
                   type="text"

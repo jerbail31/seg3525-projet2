@@ -149,7 +149,7 @@
   margin-left:15px;
 }
 .services-filterGroup{
-  margin-top:15px;
+  margin-top:20px;
 }
 .services-filterText{
   margin-top:20px;
@@ -162,6 +162,19 @@
 .services-msgCompare{
   font-size: small;
   display:none;
+}
+.services-filterTitle div{
+  margin-bottom:0px;
+  margin-right:20px;
+}
+.services-filterTitle{
+  display: flex;
+  align-items: center;
+}
+.services-clearFilters button{
+  font-size: 12px;
+  padding: 4px 8px;
+  float:right;
 }
 /*ServiceCard*/
 .serviceCard-main{
@@ -185,9 +198,8 @@
   margin-left:10px;
 }
 .serviceCard-includes ul{
-  column-count: 2;
   width:80%;
-  height:48px;
+  height:85px;
 }
 /*Booking*/
 .booking-container{

@@ -5,16 +5,16 @@ import { useNavigate } from 'react-router-dom';
 const CustomButton = ({ id, title, includes, price }) => {
   var includeObject = [];
   if (includes[0] === true) {
-    includeObject.push('Grass');
+    includeObject.push('Grass (Biweekly)');
   }
   if (includes[1] === true) {
-    includeObject.push('Trimming');
+    includeObject.push('Trimming (Monthly)');
   }
   if (includes[2] === true) {
-    includeObject.push('Leaf removal');
+    includeObject.push('Leaf removal (10 bags)');
   }
   if (includes[3] === true) {
-    includeObject.push('Aeration');
+    includeObject.push('Aeration (Spring or Fall)');
   }
 
   const cardClick = () => {
