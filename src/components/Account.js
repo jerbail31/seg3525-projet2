@@ -6,7 +6,7 @@ function Account() {
       <Container>
         <h3>Hi {'<Name>'}</h3>
         <div className='account-service'>
-          <h5>Service History</h5>
+          <h5>My service history</h5>
           <Table striped hover className='account-serviceTable'>
             <thead>
               <tr>
