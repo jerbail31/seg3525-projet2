@@ -7,7 +7,7 @@ function Home() {
 
   const navigate = useNavigate();
   const navigateToAccount = () => {
-    navigate('/seg3525-projet2/Account');
+    navigate('/seg3525-projet2/AccountLogin');
   };
 
   const navigateToServices = () => {
@@ -27,15 +27,14 @@ function Home() {
             {/* Content */}
             <div className='home-text'>
               <h4>
-                Hi I'm Chase!
+                Hello !
               </h4>
-              <br />
               <h4>
                 I'm a local student with a summer grass cutting service.
                 I have four years of lawn mowing experience around the community.
               </h4>
-              <br />
               <h4>I'm excited to work with new clients</h4>
+              <p>-Chase</p>
             </div>
           </Col>
         </Row>
