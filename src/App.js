@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
-
+import ScrollToTop from "./components/ScrollToTop";
 import './App.css';
 import Header from "./components/Header.js";
 import Navbar from "./components/Navbar.js";
@@ -13,6 +13,7 @@ import Footer from "./components/Footer.js";
 function App() {
   return (
     <Router>
+    <ScrollToTop></ScrollToTop>
     <div className="App">
       <Header />
       <Navbar />
