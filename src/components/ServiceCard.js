@@ -1,7 +1,8 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
-const CustomButton = ({ id, title, onClick, includes, price }) => {
+const CustomButton = ({ id, title, includes, price }) => {
   var includeObject = [];
   if (includes[0] === true) {
     includeObject.push('Grass');
@@ -27,6 +28,12 @@ const CustomButton = ({ id, title, onClick, includes, price }) => {
       card.style.borderWidth = '2px';
     }
   }
+  
+  const navigate = useNavigate();
+  const book = () => {
+    localStorage.setItem('selectedService', title);
+    navigate('/seg3525-projet2/Booking');
+  };
 
   price = 'Median Price: ' + price;
   return (
@@ -43,7 +50,7 @@ const CustomButton = ({ id, title, onClick, includes, price }) => {
             </ul>
           </div>
           <Card.Subtitle className='serviceCard-price'>{price} </Card.Subtitle>
-          <Button variant='success' className='serviceCard-button' onClick={onClick}> Book </Button>
+          <Button variant='success' className='serviceCard-button' onClick={book}> Book </Button>
         </Card.Body>
       </Card>
     </div>

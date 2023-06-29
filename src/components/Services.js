@@ -1,7 +1,6 @@
 import { Container, Row, Col, Form, Card, Button } from 'react-bootstrap';
 import React, { useState, useEffect } from 'react';
 import ServiceCard from './ServiceCard.js';
-import { useNavigate } from 'react-router-dom';
 
 
 function Services() {
@@ -32,11 +31,6 @@ function Services() {
   };
   const handleCheckboxChangeLeaf = () => {
     setIsCheckedLeaf(!IsCheckedLeaf);
-  };
-
-  const navigate = useNavigate();
-  const book = () => {
-    navigate('/seg3525-projet2/Booking');
   };
 
   // id[0], occurence[1], type[2]{0:grass, 1:trim, 2:aeration, 3:leaf}
@@ -117,7 +111,7 @@ function Services() {
       }
       document.getElementById('msgComapre').style.display = 'block';
     }
-    else{
+    else {
       document.getElementById('msgComapre').style.display = 'none';
     }
     setselectedOccurence('');
@@ -215,9 +209,9 @@ function Services() {
           <Col md={9}>
             <Container id='cardContainer' className='services-cardContainer'>
 
-              <ServiceCard id="cardYearGrass" title='Basic Seasonal Package' onClick={book} price='50$' includes={yearGrass[2]}></ServiceCard>
-              <ServiceCard id="cardYearTrim" title='Advanced Seasonal Package' onClick={book} price='50$' includes={yearTrim[2]}></ServiceCard>
-              <ServiceCard id="cardYearFull" title='Super Seasonal Package' onClick={book} price='50$' includes={yearFull[2]}></ServiceCard>
+              <ServiceCard id="cardYearGrass" title='Basic Seasonal Package' price='50$' includes={yearGrass[2]}></ServiceCard>
+              <ServiceCard id="cardYearTrim" title='Advanced Seasonal Package' price='50$' includes={yearTrim[2]}></ServiceCard>
+              <ServiceCard id="cardYearFull" title='Super Seasonal Package' price='50$' includes={yearFull[2]}></ServiceCard>
 
 
             </Container>

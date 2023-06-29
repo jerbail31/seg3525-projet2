@@ -18,11 +18,6 @@ function Header() {
           <span>Facebook</span>
         </div>
       </div>
-      <nav className="header-nav">
-        <ul>
-          <li><a href="/seg3525-projet2/Account">My account</a></li>
-        </ul>
-      </nav>
     </header>
   );
 }

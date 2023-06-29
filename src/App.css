@@ -87,6 +87,7 @@
 }
 
 .navbar-title {
+  cursor: pointer;
   font-size: 20px;
   font-weight: bold;
 }
@@ -102,12 +103,13 @@
   margin-left: 10px;
 }
 
-.navbar-links li a {
+.navbar-links li label {
   color: white;
   text-decoration: none;
 }
 
-.navbar-links li a:hover {
+.navbar-links li label:hover {
+  cursor:pointer;
   text-decoration: underline;
 }
 

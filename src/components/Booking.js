@@ -26,6 +26,25 @@ function Booking() {
     navigate('/seg3525-projet2/Account');
   }
 
+
+  const adressValidate = () => {
+    if(adressIsValid()){
+      document.getElementById('price').innerHTML = '50$';
+    }
+    else{
+      document.getElementById('price').innerHTML = 'Enter your adress to get your price';
+    }
+  }
+  const adressIsValid = () => {
+    if(document.getElementById('adress').value === ''){
+      return false;
+    }
+    
+    return true;
+  }
+
+  //service select
+  const service = localStorage.getItem('selectedService');
   return (
     <div className="booking">
       <Container className='booking-container'>
@@ -76,6 +95,8 @@ function Booking() {
                 <Form.Control
                   type="text"
                   placeholder='100 Innes road'
+                  id='adress'
+                  onChange={adressValidate}
                 />
               </Form.Group>
             </Col>
@@ -91,11 +112,11 @@ function Booking() {
           <Row>
             <Col md={6}>
               <label className='booking-lbl'>Service:</label>
-              <label>service name</label>
+              <label>{service}</label>
             </Col>
             <Col md={6}>
               <label className='booking-lbl'>Price: </label>
-              <label>price</label>
+              <label id='price'>Enter your adress to get your price</label>
             </Col>
           </Row>
         </div>
@@ -115,7 +136,7 @@ function Booking() {
         </Modal.Header>
         <Modal.Body>
           A confirmation has been sent to your email.
-          Navigate to your account to view your purchase status and to chat with us.
+          Navigate to your account to view your purchase status and to chat with us. Payement will be done after the service.
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
