@@ -6,16 +6,16 @@ const CustomButton = ({ id, title, includes, price }) => {
   var includeObject = [];
   if (includes[0] === true) {
     includeObject.push('Grass (Biweekly)');
-  }
+  };
   if (includes[1] === true) {
     includeObject.push('Trimming (Monthly)');
-  }
+  };
   if (includes[2] === true) {
     includeObject.push('Leaf Raking (10 bags)');
-  }
+  };
   if (includes[3] === true) {
     includeObject.push('Aeration (Spring or Fall)');
-  }
+  };
 
   const cardClick = () => {
     var card = document.getElementById(id).firstChild;
@@ -27,7 +27,7 @@ const CustomButton = ({ id, title, includes, price }) => {
       card.style.borderColor = '#3BB44B';
       card.style.borderWidth = '2px';
     }
-  }
+  };
   
   const navigate = useNavigate();
   const book = () => {

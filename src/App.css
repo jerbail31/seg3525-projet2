@@ -164,24 +164,30 @@
 .Reviews {
   text-align: center;
 }
+
 .reviews-main {
   display: flex;
   align-items: center;
 }
-.reviews-arrowLeft{
+
+.reviews-arrowLeft {
   margin-left: -50px;
 }
-.reviews-arrowRight{
+
+.reviews-arrowRight {
   margin-left: 26px;
 }
-.reviews-arrow:hover{
+
+.reviews-arrow:hover {
   cursor: pointer;
 }
-.reviews-reviewer{
-  color:white;
-  float:right;
+
+.reviews-reviewer {
+  color: white;
+  float: right;
   margin-right: 10px;
 }
+
 /*Services*/
 .services-filter {
   border: 1px solid black;
@@ -296,6 +302,30 @@
 
 .booking-yardRow {
   margin-top: 20px !important;
+}
+
+/*Account login*/
+.accountLogin-form {
+  background-color: #016E37;
+  padding: 40px 75px;
+  border-radius: 25px;
+  color: white;
+}
+
+.accountLogin-form h4 {
+  text-align: center;
+}
+
+.accountLogin-form form div {
+  margin-top: 20px;
+}
+
+.accountLogin-button {
+  text-align: center;
+}
+
+.accountLogin-button Button {
+  margin-top: 15px;
 }
 
 /*Account*/

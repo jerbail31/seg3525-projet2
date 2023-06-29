@@ -8,7 +8,7 @@ function Booking() {
 
   const navServices = () => {
     navigate('/seg3525-projet2/Services');
-  }
+  };
 
   //for modal
   const [show, setShow] = useState(false);
@@ -16,15 +16,15 @@ function Booking() {
   const handleClose = () => {
     setShow(false);
     navigate('/seg3525-projet2');
-  }
+  };
   const handleShow = () => {
     //add validation
 
     setShow(true);
-  }
+  };
   const handleMyAccount = () => {
     navigate('/seg3525-projet2/Account');
-  }
+  };
 
   const setPrice = () => {
     if (adressIsValid()) {
@@ -45,17 +45,17 @@ function Booking() {
     else {
       document.getElementById('price').innerHTML = 'Enter your adress to get your price';
     }
-  }
+  };
   const adressValidate = () => {
     setPrice();
-  }
+  };
   const adressIsValid = () => {
     if (document.getElementById('adress').value === '') {
       return false;
     }
 
     return true;
-  }
+  };
 
   const [selectedYard, setSelectedYard] = useState('full');
 

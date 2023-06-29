@@ -11,7 +11,7 @@ function Navbar() {
     navigate('/seg3525-projet2/Services');
   }
   const accountClick = () => {
-    navigate('/seg3525-projet2/Account');
+    navigate('/seg3525-projet2/AccountLogin');
   }
   const location = useLocation();
   const path = location.pathname;
@@ -23,7 +23,7 @@ function Navbar() {
     if (path === '/seg3525-projet2/Services') {
       document.getElementsByClassName('navbar-services')[0].style.fontWeight = 'bold';
     }
-    else if (path === '/seg3525-projet2/Account') {
+    else if (path === '/seg3525-projet2/Account' || path === '/seg3525-projet2/AccountLogin') {
       document.getElementsByClassName('navbar-account')[0].style.fontWeight = 'bold';
     }
     else if (path === '/seg3525-projet2') {
