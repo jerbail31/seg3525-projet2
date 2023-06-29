@@ -37,9 +37,13 @@ function Services() {
   const yearGrass = ["cardYearGrass", "seasonal", [true, false, false, false]];
   const yearTrim = ["cardYearTrim", "seasonal", [true, true, false, false]];
   const yearFull = ["cardYearFull", "seasonal", [true, true, true, true]];
-  const oneGrass = ["cardOneGrass", "oneTime", [true, false, false, false]]
+  const oneGrass = ["cardOneGrass", "oneTime", [true, false, false, false]];
+  const oneTrim = ["cardOneTrim", "oneTime", [true, true, false, false]];
+  const oneAeration = ["cardOneAeration", "oneTime", [false, false, false, true]];
+  const oneLeaf = ["cardOneLeaf", "oneTime", [false, false, true, false]];
 
-  const serviceList = [yearGrass, yearTrim, yearFull, oneGrass];
+
+  const serviceList = [yearGrass, yearTrim, yearFull, oneGrass, oneTrim, oneAeration, oneLeaf];
   useEffect(() => {
     filterCards();
   });
@@ -218,10 +222,13 @@ function Services() {
           <Col md={9}>
             <Container id='cardContainer' className='services-cardContainer'>
 
-              <ServiceCard id="cardYearGrass" title='Basic Seasonal Package' price='400$' includes={yearGrass[2]}></ServiceCard>
-              <ServiceCard id="cardYearTrim" title='Advanced Seasonal Package' price='50$' includes={yearTrim[2]}></ServiceCard>
-              <ServiceCard id="cardYearFull" title='Super Seasonal Package' price='50$' includes={yearFull[2]}></ServiceCard>
-              <ServiceCard id="cardOneGrass" title='Basic One-Time Service' price='50$' includes={oneGrass[2]}></ServiceCard>
+              <ServiceCard id="cardYearGrass" title='Basic Seasonal Package' price='449.99$' includes={yearGrass[2]}></ServiceCard>
+              <ServiceCard id="cardYearTrim" title='Advanced Seasonal Package' price='499.99$' includes={yearTrim[2]}></ServiceCard>
+              <ServiceCard id="cardYearFull" title='Super Seasonal Package' price='599.99$' includes={yearFull[2]}></ServiceCard>
+              <ServiceCard id="cardOneGrass" title='One-Time Grass Service' price='39.99$' includes={oneGrass[2]}></ServiceCard>
+              <ServiceCard id="cardOneTrim" title='One-time Grass and Trim Service' price='49.99$' includes={oneTrim[2]}></ServiceCard>
+              <ServiceCard id="cardOneAeration" title='One-time Aeration Service' price='49.99$' includes={oneAeration[2]}></ServiceCard>
+              <ServiceCard id="cardOneLeaf" title='One-time Leaf Raking Service' price='99.99$' includes={oneLeaf[2]}></ServiceCard>
 
 
             </Container>

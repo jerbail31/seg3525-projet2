@@ -1,12 +1,12 @@
 import { Form, Button, Container, Row, Col, Modal } from 'react-bootstrap';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
 function Booking() {
   const navigate = useNavigate();
-  
-    const navServices = () => {
+
+  const navServices = () => {
     navigate('/seg3525-projet2/Services');
   }
 
@@ -26,25 +26,50 @@ function Booking() {
     navigate('/seg3525-projet2/Account');
   }
 
+  const setPrice = () => {
+    if (adressIsValid()) {
+      if (selectedYard === 'full') {
+        document.getElementById('price').innerHTML = localStorage.getItem('selectedServicePrice');
+      }
+      else {
+        var pricestr = localStorage.getItem('selectedServicePrice');
+        var price = pricestr.substring(0, pricestr.length - 1);
 
-  const adressValidate = () => {
-    if(adressIsValid()){
-      document.getElementById('price').innerHTML = '50$';
+        price = price * (2 / 3);
+        price = Math.round(price * 100) / 100;
+        price = price + '$';
+
+        document.getElementById('price').innerHTML = price;
+      }
     }
-    else{
+    else {
       document.getElementById('price').innerHTML = 'Enter your adress to get your price';
     }
   }
+  const adressValidate = () => {
+    setPrice();
+  }
   const adressIsValid = () => {
-    if(document.getElementById('adress').value === ''){
+    if (document.getElementById('adress').value === '') {
       return false;
     }
-    
+
     return true;
   }
 
+  const [selectedYard, setSelectedYard] = useState('full');
+
+  const handleYardChange = (event) => {
+    setSelectedYard(event.target.value);
+  };
+
+  useEffect(() => {
+    setPrice();
+  });
+
   //service select
   const service = localStorage.getItem('selectedService');
+
   return (
     <div className="booking">
       <Container className='booking-container'>
@@ -104,7 +129,7 @@ function Booking() {
         </div>
         <div className='booking-serviceHead'>
           <h5>Service Information</h5>
-          <Button variant='success' onClick={navServices}  style={{ backgroundColor: '#3BB44B' }}>
+          <Button variant='success' onClick={navServices} style={{ backgroundColor: '#3BB44B' }}>
             Choose a different service
           </Button>
         </div>
@@ -119,12 +144,52 @@ function Booking() {
               <label id='price'>Enter your adress to get your price</label>
             </Col>
           </Row>
+          <Row className='booking-yardRow'>
+              <Col md={1}>
+                <label className='booking-lbl'>Yard: </label>
+              </Col>
+              <Col>
+                <Form>
+                  <div>
+                    <Form.Check
+                      inline
+                      type="radio"
+                      label="Full yard"
+                      name="Yards"
+                      value="full"
+                      checked={selectedYard === "full"}
+                      onChange={handleYardChange}
+                    />
+
+                    <Form.Check
+                      inline
+                      type="radio"
+                      label="Front yard only"
+                      name="Yards"
+                      value="front"
+                      checked={selectedYard === "front"}
+                      onChange={handleYardChange}
+                    />
+
+                    <Form.Check
+                      inline
+                      type="radio"
+                      label="Backyard only"
+                      name="Yards"
+                      value="back"
+                      checked={selectedYard === "back"}
+                      onChange={handleYardChange}
+                    />
+                  </div>
+                </Form>
+              </Col>
+          </Row>
         </div>
         <Row>
           <Col>
-          <Button className='booking-btnbook' variant="success" onClick={handleShow}>
-            Book service
-          </Button>
+            <Button className='booking-btnbook' variant="success" onClick={handleShow}>
+              Book service
+            </Button>
           </Col>
         </Row>
       </Container>

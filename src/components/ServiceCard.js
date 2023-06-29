@@ -11,7 +11,7 @@ const CustomButton = ({ id, title, includes, price }) => {
     includeObject.push('Trimming (Monthly)');
   }
   if (includes[2] === true) {
-    includeObject.push('Leaf removal (10 bags)');
+    includeObject.push('Leaf Raking (10 bags)');
   }
   if (includes[3] === true) {
     includeObject.push('Aeration (Spring or Fall)');
@@ -32,10 +32,11 @@ const CustomButton = ({ id, title, includes, price }) => {
   const navigate = useNavigate();
   const book = () => {
     localStorage.setItem('selectedService', title);
+    localStorage.setItem('selectedServicePrice', price);
     navigate('/seg3525-projet2/Booking');
   };
 
-  price = 'Median Price: ' + price;
+  const priceLabel = 'Median Price: ' + price;
   return (
     <div id={id} className="serviceCard-main">
       <Card className='serviceCard-card' onClick={cardClick}>
@@ -49,7 +50,7 @@ const CustomButton = ({ id, title, includes, price }) => {
               ))}
             </ul>
           </div>
-          <Card.Subtitle className='serviceCard-price'>{price} </Card.Subtitle>
+          <Card.Subtitle className='serviceCard-price'>{priceLabel} </Card.Subtitle>
           <Button variant='success' className='serviceCard-button' onClick={book}> Book </Button>
         </Card.Body>
       </Card>
